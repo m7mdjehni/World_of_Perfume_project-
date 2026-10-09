@@ -1,0 +1,10 @@
+IMAGE FIX INCLUDED
+
+The project now:
+- Uses an absolute /static/ URL prefix.
+- Forces API image URLs to be root-relative.
+- Normalizes image URLs in JavaScript.
+- Falls back to perfume1.png if a product image is missing.
+
+Run start.bat, then open http://127.0.0.1:8000/
+If the browser cached the old JS, press Ctrl+F5.

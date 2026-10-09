@@ -1,0 +1,242 @@
+[
+  {
+    "model": "store.perfume",
+    "pk": 1,
+    "fields": {
+      "name": "Midnight Oud",
+      "description": "A rich, smoky blend of oud and amber.",
+      "price": "$120",
+      "image": "img/generated/midnight-oud.svg",
+      "show_in_carousel": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 2,
+    "fields": {
+      "name": "Rose Elixir",
+      "description": "Delicate rose petals with a hint of vanilla.",
+      "price": "$95",
+      "image": "img/generated/rose-elixir.svg",
+      "show_in_carousel": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 3,
+    "fields": {
+      "name": "Citrus Breeze",
+      "description": "Fresh citrus notes with a splash of sea salt.",
+      "price": "$80",
+      "image": "img/generated/citrus-breeze.svg",
+      "show_in_carousel": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 4,
+    "fields": {
+      "name": "Velvet Bloom",
+      "description": "Soft florals with a creamy white musk finish.",
+      "price": "$88",
+      "image": "img/generated/velvet-bloom.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 5,
+    "fields": {
+      "name": "Saffron Ember",
+      "description": "Warm saffron, cedarwood, and a smoky amber glow.",
+      "price": "$110",
+      "image": "img/generated/saffron-ember.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 6,
+    "fields": {
+      "name": "Moonlit Cedar",
+      "description": "Fresh cedar layered with violet and soft woods.",
+      "price": "$105",
+      "image": "img/generated/moonlit-cedar.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 7,
+    "fields": {
+      "name": "Amber Mist",
+      "description": "Golden amber with soft vanilla and lilac air.",
+      "price": "$90",
+      "image": "img/generated/amber-mist.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 8,
+    "fields": {
+      "name": "Golden Petal",
+      "description": "Sunlit petals, warm sandalwood, and a mellow musk.",
+      "price": "$98",
+      "image": "img/generated/golden-petal.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 9,
+    "fields": {
+      "name": "Ocean Veil",
+      "description": "Mineral freshness with bergamot and airy driftwood.",
+      "price": "$85",
+      "image": "img/generated/ocean-veil.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 10,
+    "fields": {
+      "name": "Solar Musk",
+      "description": "Citrus sparkle with creamy musk and golden woods.",
+      "price": "$115",
+      "image": "img/generated/solar-musk.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 11,
+    "fields": {
+      "name": "Wild Fig",
+      "description": "Green fig leaves with warm woods and soft spice.",
+      "price": "$92",
+      "image": "img/generated/wild-fig.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 12,
+    "fields": {
+      "name": "Noir Bloom",
+      "description": "Dark florals and velvety plum with incense depth.",
+      "price": "$125",
+      "image": "img/generated/noir-bloom.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 13,
+    "fields": {
+      "name": "Vanilla Silk",
+      "description": "Creamy vanilla bean softened by iris and white tea.",
+      "price": "$99",
+      "image": "img/generated/vanilla-silk.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 14,
+    "fields": {
+      "name": "Dusk Leather",
+      "description": "Leather, tobacco, and dry woods for evening wear.",
+      "price": "$130",
+      "image": "img/generated/dusk-leather.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 15,
+    "fields": {
+      "name": "Emerald Spice",
+      "description": "Fresh green spice with cardamom and bergamot.",
+      "price": "$96",
+      "image": "img/generated/emerald-spice.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 16,
+    "fields": {
+      "name": "White Tea",
+      "description": "Silken tea leaves, neroli, and a clean dry musk.",
+      "price": "$78",
+      "image": "img/generated/white-tea.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 17,
+    "fields": {
+      "name": "Azure Lily",
+      "description": "Crisp lily petals, water notes, and soft jasmine.",
+      "price": "$102",
+      "image": "img/generated/azure-lily.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 18,
+    "fields": {
+      "name": "Cedar Rain",
+      "description": "Fresh rain on cedarwood with a luminous green note.",
+      "price": "$108",
+      "image": "img/generated/cedar-rain.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 19,
+    "fields": {
+      "name": "Peach Mirage",
+      "description": "Juicy peach skin with soft amber and sandalwood.",
+      "price": "$86",
+      "image": "img/generated/peach-mirage.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "store.perfume",
+    "pk": 20,
+    "fields": {
+      "name": "Ruby Woods",
+      "description": "Berry-rich woods with a clean, lingering amber trail.",
+      "price": "$118",
+      "image": "img/generated/ruby-woods.svg",
+      "show_in_carousel": false,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

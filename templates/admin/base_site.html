@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | World of Perfumes{% endblock %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'store/css/admin.css' %}">
+{% endblock %}
+
+{% block branding %}
+  <a href="{% url 'admin:index' %}" class="atelier-brand">
+    <span class="atelier-mark">W</span>
+    <span>World <em>of Perfumes</em></span>
+  </a>
+{% endblock %}
+
+{% block nav-global %}
+  <a class="storefront-link" href="{% url 'store:index' %}">View storefront <span aria-hidden="true">↗</span></a>
+{% endblock %}

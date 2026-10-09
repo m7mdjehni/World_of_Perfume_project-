@@ -1,0 +1,7 @@
+Django>=6.0,<6.1
+djangorestframework>=3.14,<3.16
+python-decouple>=3.8
+whitenoise>=6.6
+gunicorn>=21.2
+transformers>=4.40
+torch>=2.2

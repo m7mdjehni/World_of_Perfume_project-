@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --atelier-ink: #1d2421;
+  --atelier-muted: #66706a;
+  --atelier-paper: #f2f0ea;
+  --atelier-cream: #e5dfd0;
+  --atelier-lime: #c9d879;
+  --atelier-line: rgba(29, 36, 33, .14);
+  --primary: #1d2421;
+  --secondary: #56634c;
+  --accent: #c9d879;
+  --header-bg: #1d2421;
+  --header-color: #f2f0ea;
+  --link-fg: #56634c;
+  --link-selected-fg: #1d2421;
+  --darkened-bg: #e8e5dc;
+  --selected-row: #eef0dc;
+  --hairline-color: var(--atelier-line);
+  --body-fg: var(--atelier-ink);
+  --body-bg: var(--atelier-paper);
+  --body-quiet-color: var(--atelier-muted);
+}
+
+body, input, textarea, select, button {
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background: var(--atelier-paper);
+}
+
+#header {
+  align-items: center;
+  background: var(--atelier-ink);
+  padding: 18px 30px;
+}
+
+#branding h1, #branding h1 a, .atelier-brand {
+  align-items: center;
+  color: var(--atelier-paper);
+  display: inline-flex;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  gap: 10px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.atelier-brand em {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.atelier-mark {
+  align-items: center;
+  background: var(--atelier-lime);
+  color: var(--atelier-ink);
+  display: inline-flex;
+  font-size: 1.15rem;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+#user-tools {
+  color: #c8d0c4;
+  font-size: .75rem;
+  letter-spacing: .02em;
+}
+
+#user-tools a, .storefront-link {
+  border-bottom: 1px solid rgba(242, 240, 234, .45);
+  color: var(--atelier-paper);
+  text-decoration: none;
+}
+
+#user-tools a:hover, .storefront-link:hover {
+  border-color: var(--atelier-lime);
+  color: var(--atelier-lime);
+}
+
+.storefront-link {
+  display: inline-block;
+  font-size: .75rem;
+  margin: 18px 30px 0;
+  padding-bottom: 3px;
+}
+
+#nav-sidebar {
+  background: #e8e5dc;
+  border-right: 1px solid var(--atelier-line);
+}
+
+#nav-sidebar .module caption, #nav-sidebar .module th {
+  background: transparent;
+  color: var(--atelier-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+#nav-sidebar .module a {
+  border-radius: 0;
+  color: var(--atelier-ink);
+  padding: 9px 14px;
+}
+
+#nav-sidebar .module a:hover, #nav-sidebar .module .current-app a {
+  background: var(--atelier-lime);
+  color: var(--atelier-ink);
+}
+
+#content {
+  max-width: 1440px;
+  padding: 34px 42px 60px;
+}
+
+#content h1, .module h2, .module caption {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+
+#content h1 {
+  color: var(--atelier-ink);
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  letter-spacing: -.03em;
+  margin-bottom: 26px;
+}
+
+.module, .inline-group, fieldset {
+  border: 1px solid var(--atelier-line);
+  border-radius: 0;
+  box-shadow: 0 12px 30px rgba(29, 36, 33, .05);
+  overflow: hidden;
+}
+
+.module caption, .module h2, .inline-group h2 {
+  background: var(--atelier-cream);
+  color: var(--atelier-ink);
+  font-size: 1.15rem;
+  padding: 13px 16px;
+}
+
+.module table thead th, .results thead th {
+  background: #e8e5dc;
+  color: var(--atelier-muted);
+  font-size: .7rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+tr:nth-child(odd), .row-form, .form-row {
+  background: rgba(255, 255, 255, .24);
+}
+
+tr:hover, .row-form:hover {
+  background: var(--selected-row);
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+  background: var(--atelier-ink);
+  border: 1px solid var(--atelier-ink);
+  border-radius: 0;
+  color: var(--atelier-paper);
+  font-weight: 600;
+  padding: 10px 16px;
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover, .submit-row input:hover, a.button:hover {
+  background: #56634c;
+  color: white;
+}
+
+.object-tools a, .addlink {
+  background: var(--atelier-lime);
+  border-radius: 0;
+  color: var(--atelier-ink);
+  font-weight: 600;
+}
+
+.object-tools a:hover, .addlink:hover {
+  background: #b6c665;
+  color: var(--atelier-ink);
+}
+
+input, textarea, select, .selector {
+  border: 1px solid var(--atelier-line);
+  border-radius: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #8d9d4f;
+  box-shadow: 0 0 0 2px rgba(201, 216, 121, .35);
+  outline: 0;
+}
+
+@media (max-width: 767px) {
+  #header {
+    padding: 16px 18px;
+  }
+
+  #content {
+    padding: 26px 18px 44px;
+  }
+
+  #user-tools {
+    line-height: 1.7;
+    margin-top: 10px;
+  }
+
+  .storefront-link {
+    margin-left: 18px;
+  }
+}

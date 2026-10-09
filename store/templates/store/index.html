@@ -1,0 +1,96 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World of Perfumes | Modern fragrance</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+  <script defer src="{% static 'store/js/main.js' %}"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="{% url 'store:index' %}"><span class="brand-mark">W</span><span>World <em>of Perfumes</em></span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#collection">Collection</a>
+      <a href="#story">Our story</a>
+      <div class="header-actions">
+        <span class="time-box" id="time" aria-label="Current time"></span>
+        <button id="cartBtn" type="button" class="cart-button" data-bs-toggle="modal" data-bs-target="#cartModal" aria-label="Open shopping bag">Bag <span id="cartCount">0</span></button>
+      </div>
+    </nav>
+    <div class="account-links">
+      {% if user.is_authenticated %}
+        <span>Hi, {{ user.username }}</span>
+        <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button type="submit">Log out</button></form>
+      {% else %}
+        <a href="{% url 'login' %}">Log in</a>
+        <a class="account-signup" href="{% url 'store:register' %}">Join us</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="story">
+      <div class="hero-copy">
+        <p class="eyebrow">Small batch / Bangkok</p>
+        <h1>Wear the<br><span>unexpected.</span></h1>
+        <p class="hero-text">A considered collection of modern fragrances for the moments that stay with you.</p>
+        <a class="primary-button" href="#collection">Explore scents <span>↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Perfume bottle showcase">
+        <div class="sun-disc"></div>
+        <div class="hero-label">No. 01<br><strong>Midnight Oud</strong></div>
+        <div class="hero-art" aria-label="Perfume showcase">
+  <div class="sun-disc"></div>
+  <div class="hero-label">No. 01<br><strong>Midnight Oud</strong></div>
+  <img class="hero-photo" src="{% static 'store/img/photos/midnight-oud.jpg' %}" alt="Midnight Oud">
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip"><span>01 / The collection</span><p>Distinctive formulas, made slowly and worn often.</p><span>Scroll to discover ↓</span></section>
+
+    <section id="collection" class="collection-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">The edit</p><h2>Find your signature.</h2></div>
+        {% if user.is_superuser %}
+  <button id="addCardBtn" class="text-button">Add a fragrance <span>+</span></button>
+{% endif %}
+      </div>
+      <div id="perfumeCarousel" class="carousel slide feature-carousel" data-bs-ride="carousel" aria-label="Featured fragrances">
+        <div class="carousel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#perfumeCarousel" data-bs-slide="prev" aria-label="Previous fragrance"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#perfumeCarousel" data-bs-slide="next" aria-label="Next fragrance"><span class="carousel-control-next-icon"></span></button>
+      </div>
+      <div id="perfume-list" class="product-grid"></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand">World <em>of Perfumes</em></div><p>Fragrance for the beautifully curious.</p><span>&copy; 2026 World of Perfumes</span></footer>
+
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title" id="cartModalLabel">Your bag</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body"><div id="cartItems"></div><p id="cartEmptyMsg">Your bag is waiting for something special.</p></div>
+      <div class="modal-footer"><div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div><button id="submitOrderBtn" type="button" class="primary-button" disabled>Place order</button></div>
+    </div></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.PRODUCTS_API_URL = "{% url 'store:product_list_api' %}";
+    window.ADD_PRODUCT_API_URL = "{% url 'store:add_product_api' %}";
+    window.ORDER_API_URL = "{% url 'store:order_create_api' %}";
+    window.GENERATE_DESCRIPTION_API_URL = "{% url 'store:generate_description_api' %}";
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+    window.IS_AUTHENTICATED = {{ user.is_authenticated|yesno:"true,false" }};
+    window.LOGIN_URL = "{% url 'login' %}";
+  </script>
+</body>
+</html>
